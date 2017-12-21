@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+docker run \
+    -it \
+    --rm \
+    --name npm \
+    -h node-js \
+    -v $(pwd)/app:/app \
+    -w /app \
+    -p 8080:8080 \
+    sfermi-node:dev "$@"
